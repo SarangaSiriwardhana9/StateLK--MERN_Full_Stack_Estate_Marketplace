@@ -25,6 +25,8 @@ export default function Profile() {
   const dispatch = useDispatch();
 
 
+
+
   console.log(file);
   console.log(filePerc);
   console.log(fileUploadError)
@@ -100,6 +102,26 @@ export default function Profile() {
     }
   };
 
+//handle delete user
+const handleDeleteUser = async () => {
+  try {
+    dispatch(deleteUserStart());
+    const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+      method: 'DELETE',
+    });
+    const data = await res.json();
+    if (data.success === false) {
+      dispatch(deleteUserFailure(data.message));
+      return;
+    }
+    dispatch(deleteUserSuccess(data));
+
+    // Redirect to sign-in page after successful deletion
+    window.location.href = '/signin';
+  } catch (error) {
+    dispatch(deleteUserFailure(error.message));
+  }
+};
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
@@ -175,7 +197,13 @@ export default function Profile() {
 
       </form>
       <div className="flex justify-between mt-5">
-        <span className='text-red-700 cursor-pointer font-semibold'>Delete Account </span>
+        
+      <span
+          onClick={handleDeleteUser}
+          className='text-red-700 cursor-pointer'
+        >
+          Delete account
+        </span>
         <span className='text-red-700 cursor-pointer font-semibold'>Sign Out </span>
       </div>
       <p className='text-red-700 mt-5'>{error ? error : ''}</p>
@@ -186,4 +214,3 @@ export default function Profile() {
   )
 }
 
-/* update */
