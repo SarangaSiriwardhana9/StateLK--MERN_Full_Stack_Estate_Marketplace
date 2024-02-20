@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import {useSelector} from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import { Navigation } from 'swiper/modules';
@@ -13,6 +14,7 @@ import {
   FaParking,
   FaShare,
 } from 'react-icons/fa';
+import Contact from '../Components/Contact';
 
 // https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.
 
@@ -23,6 +25,8 @@ export default function Listing() {
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
   const params = useParams();
+  const {currentUser} = useSelector((state) => state.user)
+  const [contact, setContact] = useState(false)
   useEffect(() => {
     const fetchListing = async () => {
       try {
@@ -132,6 +136,13 @@ export default function Listing() {
                 {listing.furnished ? 'Furnished' : 'Unfurnished'}
               </li>
             </ul>
+            {currentUser && listing.userRef !== currentUser._id && !contact &&(
+                   <button onClick={()=>setContact(true)} className='bg-green-900 text-white p-2 rounded-md'>
+                   Contact Agent
+                 </button>
+            )}
+            {contact && <Contact listing={listing}/>}
+           
           </div>
         </div>
       )}
