@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-import { MdLocationOn } from 'react-icons/md';
+import { MdLocationOn, MdHotel, MdHotTub, MdLandscape } from 'react-icons/md';
 
 export default function ListingItem({ listing }) {
   return (
@@ -27,24 +27,51 @@ export default function ListingItem({ listing }) {
           <p className='text-sm text-gray-600 line-clamp-2'>
             {listing.description}
           </p>
-          <p className='text-slate-500 mt-2 font-semibold '>
-            RS. 
+          <p className='text-red-500 mt-2 font-semibold'>
+            RS.
             {listing.offer
               ? listing.discountPrice.toLocaleString('en-US')
               : listing.regularPrice.toLocaleString('en-US')}
-            {listing.type === 'rent' && ' / month'}
+            {listing.type === 'rent' && ' '}
+            {listing.type === 'rent' && <span className="text-slate-500  text-xs"> Per month</span>}
           </p>
           <div className='text-slate-700 flex gap-4'>
-            <div className='font-bold text-xs'>
-              {listing.bedrooms > 1
-                ? `${listing.bedrooms} beds `
-                : `${listing.bedrooms} bed `}
-            </div>
-            <div className='font-bold text-xs'>
-              {listing.bathrooms > 1
-                ? `${listing.bathrooms} baths `
-                : `${listing.bathrooms} bath `}
-            </div>
+            {/* display land size if propertyType is 'land' */}
+            {listing.propertyType === 'land' && (
+              <div className='flex items-center'>
+                <MdLandscape className='h-4 w-4 mr-1' />
+                <span className='font-bold text-xs'>
+                  {listing.AreaOfLand} perches
+                </span>
+              </div>
+            )}
+            {/* display area, bed, and bath if propertyType is not 'land' */}
+            {listing.propertyType !== 'land' && (
+              <>
+                <div className='flex items-center'>
+                  <MdLandscape className='h-4 w-4 mr-1' />
+                  <span className='font-bold text-xs'>
+                    {listing.AreaOfLand} perches
+                  </span>
+                </div>
+                <div className='flex items-center'>
+                  <MdHotel className='h-4 w-4 mr-1' />
+                  <span className='font-bold text-xs'>
+                    {listing.bedrooms > 1
+                      ? `${listing.bedrooms} bedrooms`
+                      : `${listing.bedrooms} bedroom`}
+                  </span>
+                </div>
+                <div className='flex items-center'>
+                  <MdHotTub className='h-4 w-4 mr-1' />
+                  <span className='font-bold text-xs'>
+                    {listing.bathrooms > 1
+                      ? `${listing.bathrooms} bathrooms`
+                      : `${listing.bathrooms} bathroom`}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </Link>

@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 const listingSchema = new mongoose.Schema(
   {
+    propertyType: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -14,6 +18,27 @@ const listingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    NoOfFloors:{
+      type: Number,
+      
+    },
+    AgeOfBuilding:{
+      type: Number,
+      
+    },
+    WidthOfApproachRoad:{
+      type: Number,
+     
+    },
+ AreaOfLand:{
+      type: Number,
+      
+    },
+    FloorArea:{
+      type: Number,
+      
+    },
+
     regularPrice: {
       type: Number,
       required: true,
@@ -24,23 +49,23 @@ const listingSchema = new mongoose.Schema(
     },
     bathrooms: {
       type: Number,
-      required: true,
+     
     },
     bedrooms: {
       type: Number,
-      required: true,
+      
     },
     furnished: {
       type: Boolean,
-      required: true,
+      
     },
     parking: {
       type: Boolean,
-      required: true,
+      
     },
     type: {
       type: String,
-      required: true,
+     
     },
     offer: {
       type: Boolean,
