@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { MdLocationOn, MdHotel, MdHotTub, MdLandscape } from 'react-icons/md';
+import '../pages/CSS/swiper-custom.css'
 
 export default function ListingItem({ listing }) {
   return (
-    <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+    <div className='bg-[#f9ffff]  shadow-lg hover:shadow-xl transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
       <Link to={`/listing/${listing._id}`}>
         <img
           src={

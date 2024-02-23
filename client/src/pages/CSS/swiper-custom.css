@@ -1,0 +1,39 @@
+/* swiper-custom.css */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px; /* Set the width of the buttons */
+  height: 50px; /* Set the height of the buttons */
+  background-color: rgb(162, 216, 238); /* Set the background color of the buttons */
+  border-radius: 50%; /* Make the buttons round */
+  display: flex; /* Use flexbox for positioning */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  /* addd shadow */
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px; /* Set the font size of the icons */
+  color: rgb(12, 12, 12); /* Set the color of the icons */
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the position of the buttons */
+.swiper-button-prev {
+  left: 10px; /* Position the previous button to the left */
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next {
+  right: 10px; /* Position the next button to the right */
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+}
+
+.oswald-font {
+  font-family: 'Oswald', sans-serif;
+}
+
+.card-background {
+  background-color: #9efff7;
+}

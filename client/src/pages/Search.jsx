@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Listingitem from '../Components/Listingitem';
+import back11 from '/back11.jpg';
 export default function Search() {
     const navigate = useNavigate();
     const [sidebardata, setSidebardata] = useState({
@@ -116,9 +117,9 @@ export default function Search() {
 
 
     return (
-        <div className='flex flex-col md:flex-row'>
+        <div className='flex flex-col md:flex-row  mt-16 ' style={{ backgroundImage: `url(${back11})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {/* left */}
-            <div className="p-4 border-b-2 md:border-r-2 md:min-h-screen w-80">
+            <div className="p-4 border-b-2 md:border-r-2 md:min-h-screen w-80 mt-4">
                 <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
 
                     {/* left menu starts */}
@@ -226,16 +227,16 @@ export default function Search() {
 
                     {/* ledt menu ends */}
 
-                    <button type='submit' className='bg-blue-500 text-white p-2 mt-5 rounded-lg'>Search</button>
+                    <button type='submit' className='bg-[#aaf7f0] hover:bg-[#92e2db] text-[#1f5752] font-semibold p-2 mt-5 rounded-lg'>Search</button>
                 </form>
             </div>
 
             {/* right */}
             <div className="items-center">
                 {/* Search results text */}
-                <div className='flex justify-center text-2xl m-4 font-semibold mt-4 w-full'>
-                    Search Results
-                </div>
+                <h2 className='oswald-font text-2xl md:text-4xl font-bold mb-8 mt-4 text-center text-gray-800'>Search Results</h2>
+                    
+                
                 {/* centered loading */}
                 {loading && (
                     <div className='fixed top-0 left-0 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50'>
@@ -252,9 +253,9 @@ export default function Search() {
 
                     ))}
                 </div>
-                <div className='w-full items-center flex justify-center'>
+                <div className='w-full items-center flex justify-center mb-10 mt-4'>
                     {showMore && (
-                        <button onClick={onShowMoreClick} className='inline-block px-4 py-2 mt-4 text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 ease-in'>
+                        <button onClick={onShowMoreClick} className='inline-block px-4 py-2 mt-4 bg-[#aaf7f0] hover:bg-[#92e2db] text-[#1f5752] font-semibold rounded-lg shadow-md  transition-colors duration-300 ease-in'>
                             Show More
                         </button>
 

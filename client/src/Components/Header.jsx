@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { Link,useNavigate} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import backHeader from '/backHeader.jpg';
 
 export default function Header() {
+  const [isSticky, setSticky] = useState(false);
   const { currentUser } = useSelector(state => state.user);
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
@@ -25,13 +27,31 @@ export default function Header() {
     
   }, [location.search]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-slate-200 shadow-md">
+    /* style={{ backgroundImage: `url(${backHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }} */
+    <header className="bg-[#d1fffb] shadow-xl mx-auto fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-50" >
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-500">Sahand</span>
-            <span className="text-slate-700">Estate</span>
+            <span className="text-slate-500">State</span>
+            <span className="text-slate-700">LK</span>
           </h1>
         </Link>
 
