@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Listingitem from '../Components/Listingitem';
 import back11 from '/back11.jpg';
-export default function Search() {
+export default function AllListings() {
     const navigate = useNavigate();
     const [sidebardata, setSidebardata] = useState({
         searchTerm: '',
@@ -234,7 +234,7 @@ export default function Search() {
             {/* right */}
             <div className="items-center">
                 {/* Search results text */}
-                <h2 className='oswald-font text-2xl md:text-4xl font-bold mb-8 mt-4 text-center text-gray-800'>Search Results</h2>
+                <h2 className='oswald-font text-2xl md:text-4xl font-bold mb-8 mt-4 text-center text-gray-600'>Explore All Available  Properties </h2>
                     
                 
                 {/* centered loading */}
@@ -269,3 +269,4 @@ export default function Search() {
     )
 
 }
+
