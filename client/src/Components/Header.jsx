@@ -147,7 +147,7 @@ export default function Header() {
             <div ref={menuRef} className="relative">
               <img
                 onClick={() => setMenuOpen(!isMenuOpen)}
-                className="rounded-full h-7 w-7 object-cover cursor-pointer"
+                className="rounded-full h-7 w-7 object-cover cursor-pointer justify-center"
                 src={currentUser.avatar}
                 alt="profile"
               />

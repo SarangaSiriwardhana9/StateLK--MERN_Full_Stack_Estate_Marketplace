@@ -31,6 +31,7 @@ export default function Contact({ listing }) {
           </p>
           <textarea
             className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            required
             name='message'
             id='message'
             rows='4'
@@ -41,7 +42,7 @@ export default function Contact({ listing }) {
 
           <Link
             to={`mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`}
-            className="block w-full px-4 py-2 text-center text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
+            className="block w-full px-4 py-2 text-center text-white bg-[#4f9993] rounded-md hover:bg-[#3f807a] focus:outline-none"
           >
             Send Message
           </Link>

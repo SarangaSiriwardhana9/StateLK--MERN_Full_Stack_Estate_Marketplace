@@ -89,7 +89,7 @@ export default function ContactUs() {
                 className='border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500'
               />
             </div>
-            <button type='submit' className='bg-[#40b4ab] text-white px-4 py-2 rounded hover:bg-blue-600'>Submit</button>
+            <button type='submit' className='bg-[#40b4ab] text-white px-4 py-2 rounded hover:bg-[#4f9993]'>Submit</button>
           </form>
         </div>
       </div>

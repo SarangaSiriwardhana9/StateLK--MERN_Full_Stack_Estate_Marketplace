@@ -62,7 +62,12 @@ export default function Listing() {
 
   return (
     <main>
-      {loading && <p className='text-center my-7 text-2xl'>Loading...</p>}
+      {loading &&  <div className='fixed top-0 left-0 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50'>
+                    <div className="flex flex-col items-center">
+                        <div className="w-16 h-16 rounded-full bg-gray-300 animate-pulse"></div>
+                        <div className="text-white mt-2">Loading...</div>
+                    </div>
+                </div>}
       {error && (
         <p className='text-center my-7 text-2xl'>Something went wrong!</p>
       )}
@@ -118,7 +123,7 @@ export default function Listing() {
                   <p className='m-0'>vacant land</p>
                 </div>
               )}
-              <p className='bg-green-500 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
+              <p className='bg-[#4f9993] w-full max-w-[200px] text-white text-center p-1 rounded-md'>
                 {listing.type === 'rent' ? (
                   <>
                     <FaMoneyBillWave className='inline mr-1' /> For Rent
@@ -192,7 +197,7 @@ export default function Listing() {
 
             </ul>
             {currentUser && listing.userRef !== currentUser._id && !contact && (
-              <button onClick={() => setContact(true)} className='bg-green-900 text-white p-2 rounded-md'>
+              <button onClick={() => setContact(true)} className='bg-[#6bd4cc] text-slate-700 text-lg p-2 rounded-md'>
                 Contact Agent
               </button>
             )}
