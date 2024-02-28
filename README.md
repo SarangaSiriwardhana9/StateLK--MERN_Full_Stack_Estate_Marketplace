@@ -1,4 +1,7 @@
-<img src="https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/6571cc76-b0b3-4bed-becf-a7a555a6d738" alt="StateLk Logo" width="200px">
+<div style="text-align: center;">
+  <img src="https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/6571cc76-b0b3-4bed-becf-a7a555a6d738" alt="StateLk Logo" width="200px">
+</div>
+
 
 # StateLk
 
