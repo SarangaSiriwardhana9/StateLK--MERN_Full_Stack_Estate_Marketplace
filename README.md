@@ -12,6 +12,10 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 - **Profile Management**: Update user profiles and view added listings.
 - **Responsive Design**: Fully responsive design for optimal user experience on all devices.
 
+  ## Demo
+
+Check out the live demo: [StateLk Demo](statelk-deployed.onrender.com)
+
 ## Installation
 
 To run StateLk locally, follow these steps:
