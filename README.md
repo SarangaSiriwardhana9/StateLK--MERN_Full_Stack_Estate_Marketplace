@@ -14,7 +14,7 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 
   ## Demo
 
-Check out the live demo: [StateLk Demo](statelk-deployed.onrender.com)
+Check out the live demo: [StateLk Demo](https://statelk-deployed.onrender.com)
 
 ## Installation
 
