@@ -16,10 +16,20 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 
 To run StateLk locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/StateLk.git`
-2. Install dependencies: `npm install` (both in the root directory and in the `client` directory)
-3. Set up Firebase for authentication and image uploading.
-4. Start the development server: `npm run dev`
+1. Clone the repository: `git clone [https://github.com/your-username/StateLk.git](https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace.git)`
+2. Navigate to the 'client' folder and create a `.env` file with your Firebase configuration:
+```
+REACT_APP_FIREBASE_API_KEY=your-api-key
+```
+4. Navigate to the 'server' folder and create a `.env` file with your MongoDB URI and JWT secret:
+```
+MONGODB_URI=your-mongodb-uri
+JWT_SECRET=your-jwt-secret
+```
+5. Install dependencies in both the 'client' and 'server' folders: `npm install`
+6. Start the development servers:
+- For the client: `npm run dev` in the 'client' folder
+- For the server: `npm run dev` in the 'server' folder
 
 ## Technologies Used
 
@@ -33,9 +43,6 @@ To run StateLk locally, follow these steps:
 
 Contributions are welcome! Please create a new branch for your changes and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
