@@ -22,7 +22,6 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 | ![Screenshot 2024-02-28 155618](https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/db797db2-72bc-489a-94f3-947af56bd46c) | ![Screenshot 2024-02-28 155407](https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/37b125eb-5b84-4330-b4f4-197e1994555b) |
 
 
-
 ## Features
 
 - **User Authentication**: Secure sign-up and sign-in functionality, including Google sign-in.
@@ -32,6 +31,10 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 - **Add Listings**: Users can add their own property listings.
 - **Profile Management**: Update user profiles and view added listings.
 - **Responsive Design**: Fully responsive design for optimal user experience on all devices.
+- **Loading Effects**: Utilizes loading effects to enhance user experience during data fetching.
+- **Alerts with SweetAlert**: Uses SweetAlert for attractive and user-friendly alerts.
+
+
 
   ## Demo
 
