@@ -7,7 +7,7 @@
 
 # StateLk
 
-StateLk is a modern real estate platform built using the MERN (MongoDB, Express, React, Node.js) stack, with Firebase integration for Google sign-in, image uploading, and JWT authentication. It also utilizes Vite for fast and efficient development. StateLk provides a seamless experience for users to explore, list, and manage properties,
+StateLk is a modern real estate platform built using the MERN (MongoDB, Express, React, Node.js) stack, with Firebase integration for Google sign-in, image uploading, and JWT authentication. It also utilizes Vite for fast and efficient development. StateLk provides a seamless experience for users to explore, list, and manage properties.
 
 <div style="text-align:center;">
   <img src="https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/1114ebf5-fd64-4f3a-bead-e4e1deb986d3" alt="Screenshot 2024-02-28 154149" />
