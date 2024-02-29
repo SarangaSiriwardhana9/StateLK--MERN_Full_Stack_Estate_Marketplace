@@ -3,12 +3,14 @@
 </p>
 
 
+
+
 # StateLk
 
-StateLk is a modern real estate platform built using the MERN (MongoDB, Express, React, Node.js) stack, with Firebase integration for Google sign-in, image uploading, and JWT authentication. It provides a seamless experience for users to explore, list, and manage properties,
+StateLk is a modern real estate platform built using the MERN (MongoDB, Express, React, Node.js) stack, with Firebase integration for Google sign-in, image uploading, and JWT authentication. It also utilizes Vite for fast and efficient development. StateLk provides a seamless experience for users to explore, list, and manage properties,
 
 <div style="text-align:center;">
-  <img src="https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/e02e9328-4e43-49df-af6f-5325d202c854" alt="Screenshot 2024-02-28 154149" />
+  <img src="https://github.com/SarangaSiriwardhana9/StateLK--MERN_Full_Stack_Estate_Marketplace/assets/99233703/1114ebf5-fd64-4f3a-bead-e4e1deb986d3" alt="Screenshot 2024-02-28 154149" />
 </div>
 
 |  |  |
@@ -24,7 +26,7 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 
 ## Features
 
-- **User Authentication**: Secure sign-up and sign-in functionality, including Google sign-in.
+- **User Authentication**: Secure sign-up and sign-in functionality, including Google sign-in. 🔑
 - **Property Listings**: View available listings for houses and lands.
 - **Search and Sort**: Easily search and sort listings based on various criteria.
 - **Contact Sellers**: Contact sellers directly via email for inquiries.
@@ -33,6 +35,11 @@ StateLk is a modern real estate platform built using the MERN (MongoDB, Express,
 - **Responsive Design**: Fully responsive design for optimal user experience on all devices.
 - **Loading Effects**: Utilizes loading effects to enhance user experience during data fetching.
 - **Alerts with SweetAlert**: Uses SweetAlert for attractive and user-friendly alerts.
+- **Advanced Authentication**: Implement JWT, Firebase, and Google OAuth for secure and seamless user access. 🔑
+- **Real-world CRUD Operations**: Create, read, update, and delete property listings using MongoDB. 🏡
+- **User-friendly Features**: Enhance the user experience with image uploads, property listing management, and more. 💡
+- **Advanced Search Functionality**: Implement cutting-edge search features to help users find what they're looking for. 🚀
+
 
 
 
